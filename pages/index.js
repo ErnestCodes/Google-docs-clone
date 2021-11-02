@@ -21,7 +21,14 @@ export default function Home() {
   const modal = (
     <Modal size="sm" active={showModal} toggler={() => setShowModal(false)}>
       <ModalBody>
-        <input type="text" value={input} />
+        <input
+          type="text"
+          value={input}
+          onChange={() => setInput(e.target.value)}
+          className="outline-none w-full"
+          placeholder="Enter name of document..."
+          onKeyDown=""
+        />
       </ModalBody>
     </Modal>
   );
